@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  color: #4c4e61;
+  background: #fafafa;
+  font-size: 1.5rem;
+  font-family: "Poppins"; }
+
+p {
+  color: #a3a5ae; }
+
+.header {
+  text-align: center;
+  width: 50%;
+  margin: 6rem auto 0; }
+
+.heading {
+  margin-bottom: 2rem; }
+  .heading__light, .heading__bold {
+    display: block; }
+  .heading__light {
+    font-weight: 200; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
+main {
+  max-width: 114rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-gap: 1.5rem; }
+
+.one {
+  align-self: center;
+  grid-row: 1/3;
+  justify-content: center;
+  align-items: center; }
+
+.two {
+  align-self: end;
+  align-items: flex-end; }
+
+.four {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  align-self: center; }
+
+.three {
+  grid-column: 2/3; }
+
+@media only screen and (max-width: 40rem) {
+  main {
+    padding: 2rem 2rem 10rem 2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column; }
+  .header {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem; }
+    .header .heading__light, .header .heading__bold {
+      font-size: 2.5rem;
+      display: block; }
+  .card:not(:last-child) {
+    margin-bottom: 2rem; } }
+
+/* @media only screen and (max-width: 375px) {
+  main {
+    grid-template-areas:
+      "header header"
+      "box1 box2"
+      "box3 box4";
+  }
+
+  .header {
+    grid-area: header;
+  }
+  .one {
+    grid-area: box1;
+  }
+  .two {
+    grid-area: box2;
+  }
+  .three {
+    grid-area: box3;
+  }
+  .four {
+    grid-area: box4;
+  }
+}
+ */
+.card {
+  text-align: left;
+  padding: 2rem;
+  height: 25rem;
+  width: 100%;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(76, 78, 97, 0.2);
+  overflow: hidden;
+  position: relative; }
+  .card__title {
+    margin-bottom: 2rem; }
+  .card__image {
+    position: absolute;
+    bottom: 10%;
+    right: 10%; }
+
+.one::before {
+  content: "";
+  width: 100%;
+  height: 1.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #45d3d3; }
+
+.two::before {
+  content: "";
+  width: 100%;
+  height: 1.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ea5353; }
+
+.three::before {
+  content: "";
+  width: 100%;
+  height: 1.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fcaf4a; }
+
+.four::before {
+  content: "";
+  width: 100%;
+  height: 1.5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #549ef2; }

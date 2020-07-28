@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  color: $neutral-primary;
+  background: $neutral-tertiary;
+  font-size: 1.5rem;
+  font-family: "Poppins";
+}
+
+p {
+  color: $neutral-secondary;
+}
+
+.header {
+  text-align: center;
+  width: 50%;
+  margin: 6rem auto 0;
+}
+
+.heading {
+  margin-bottom: 2rem;
+  &__light,
+  &__bold {
+    display: block;
+  }
+
+  &__light {
+    font-weight: 200;
+  }
+}
+//footer
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -1,0 +1,89 @@
+main {
+  max-width: 114rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-gap: 1.5rem;
+}
+
+.one {
+  align-self: center;
+  grid-row: 1/3;
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  align-self: end;
+  align-items: flex-end;
+}
+
+.four {
+  grid-column: 3/4;
+  grid-row: 1/3;
+
+  align-self: center;
+}
+
+.three {
+  grid-column: 2/3;
+}
+
+@media only screen and (max-width: 40rem) {
+  main {
+    padding: 2rem 2rem 10rem 2rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+
+    .heading {
+      &__light,
+      &__bold {
+        font-size: 2.5rem;
+        display: block;
+      }
+    }
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+/* @media only screen and (max-width: 375px) {
+  main {
+    grid-template-areas:
+      "header header"
+      "box1 box2"
+      "box3 box4";
+  }
+
+  .header {
+    grid-area: header;
+  }
+  .one {
+    grid-area: box1;
+  }
+  .two {
+    grid-area: box2;
+  }
+  .three {
+    grid-area: box3;
+  }
+  .four {
+    grid-area: box4;
+  }
+}
+ */

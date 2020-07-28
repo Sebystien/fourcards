@@ -1,0 +1,47 @@
+@mixin top($bg) {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 1.5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $bg;
+  }
+}
+
+.card {
+  text-align: left;
+  padding: 2rem;
+  height: 25rem;
+  width: 100%;
+
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: $shadow;
+  overflow: hidden;
+  position: relative;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+}
+
+.one {
+  @include top($primary-cyan);
+}
+.two {
+  @include top($primary-red);
+}
+.three {
+  @include top($primary-orange);
+}
+.four {
+  @include top($primary-blue);
+}
